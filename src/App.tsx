@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from './components/Hero';
-import './App.scss';
+import Hero from './components/Hero/HeroIndex';
+import './styles/App.scss';
 
 function App() {
   return (
