@@ -30,8 +30,8 @@ export default function Name(): JSX.Element {
          <motion.path variants={pathVariants} initial="hidden" animate="visible" className="stroke-1" d="M103.94,91l-8.56,28.88a109.62,109.62,0,0,1,7.79-18.58C106,95.87,109.26,88.6,115.32,86a6.25,6.25,0,0,1,5.44,0,6.64,6.64,0,0,1,3,5,6.15,6.15,0,0,1-1.45,5.29c-1.93,1.87-4.84,1.52-7.27,1.17" />
          <motion.path variants={pathVariants} initial="hidden" animate="visible" className="stroke-1" d="M124.1,94.22l-8.57,28.88a109.9,109.9,0,0,1,7.8-18.57c2.82-5.47,6.09-12.75,12.14-15.31a6.28,6.28,0,0,1,5.44.06,6.63,6.63,0,0,1,3,5,6.2,6.2,0,0,1-1.45,5.3c-1.94,1.86-4.85,1.51-7.27,1.17" />
          <motion.path variants={pathVariants} initial="hidden" animate="visible" className="stroke-1" d="M160.93,94.78c0,10.44-12.16,10-14.06,2.44s8.18-15.49,12-6.81" />
-         <motion.circle className="stroke-3" cx="67.16" cy="80.86" r="2.35" />
-         <motion.circle className="stroke-3" cx="100.83" cy="84.23" r="2.35" />
+         <circle className="stroke-3" cx="67.16" cy="80.86" r="2.35" />
+         <circle className="stroke-3" cx="100.83" cy="84.23" r="2.35" />
       </svg>
    )
 }
