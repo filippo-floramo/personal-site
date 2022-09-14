@@ -1,17 +1,14 @@
-
-
 .about {
    background-color: aquamarine;
    height: 100vh;
    width: 100%;
+   padding: 0 90px;
    display: flex;
+   align-items: center;
+   justify-content: flex-start;
 
    &--container {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
 
 
       &--content {
@@ -22,9 +19,6 @@
          z-index: 3;
 
          &:nth-of-type(2) {
-            position: absolute;
-            top: 50%;
-            left: 45%;
             background-color: bisque;
             width: 500px;
             z-index: 2;
@@ -33,15 +27,20 @@
    }
 
    .about--propic {
+      top: 20%;
+      left: 65%;
+      position: absolute;
+      height: 100px;
+      width: 100px;
       align-self: center;
-      margin-bottom: 270px;
-      margin-right: 300px;
+      background-color: white;
    }
 
-   .arrow {
-      justify-content: flex-end;
-      align-self: center;
-      padding: 0 30px;
-   }
 }
 
+.arrow {
+   position: absolute;
+   top: 50%;
+   z-index: 10;
+   left: 90%;
+}

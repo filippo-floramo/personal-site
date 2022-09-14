@@ -1,4 +1,5 @@
 import React from "react";
+import BioContent from "./BioContent";
 
 
 
@@ -9,16 +10,13 @@ export default function BioIndex(): JSX.Element {
    return (
       <>
          <section className="about">
-            <div className="about--container">
-               <div className="about--container--content">POrca</div>
-               <div className="about--container--content"></div>
-            </div>
+            <BioContent />
             <div className="about--propic">
                maria
             </div>
-            <section className="arrow">
+            <div className="arrow">
                popoppo
-            </section>
+            </div>
          </section>
       </>
    )
