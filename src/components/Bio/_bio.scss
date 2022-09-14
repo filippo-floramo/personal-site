@@ -1,0 +1,47 @@
+
+
+.about {
+   background-color: aquamarine;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+
+   &--container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+
+      &--content {
+         width: 450px;
+         height: 300px;
+         background-color: aliceblue;
+         position: relative;
+         z-index: 3;
+
+         &:nth-of-type(2) {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            background-color: bisque;
+            width: 500px;
+            z-index: 2;
+         }
+      }
+   }
+
+   .about--propic {
+      align-self: center;
+      margin-bottom: 270px;
+      margin-right: 300px;
+   }
+
+   .arrow {
+      justify-content: flex-end;
+      align-self: center;
+      padding: 0 30px;
+   }
+}
+

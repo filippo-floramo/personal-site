@@ -1,10 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 
- interface Contx {
-   lol: string;
-   setLol: React.Dispatch<React.SetStateAction<string>>
+interface Contx {
+   isHome: boolean;
+   setIsHome: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Context = createContext<Contx | null>(null);
@@ -12,16 +13,28 @@ const Context = createContext<Contx | null>(null);
 
 export function ContextProvider({ children }: any) {
 
-   const [lol, setLol] = useState<string>("Cialo")
+   const [isHome, setIsHome] = useState<boolean>(localStorage.getItem('home-page') === 'true');
+
+   const pageLocation = useLocation();
+
+   useEffect(() => {
+      localStorage.setItem("home-page", String(isHome));
+   }, [isHome]);
+   
+
+   useEffect(() => {
+      if (pageLocation.pathname !== "/") { setIsHome(false) }
+      else{setIsHome(true)}
+   }, [pageLocation])
 
 
-   const lollo: Contx = {
-      lol,
-      setLol
+   const Values: Contx = {
+      isHome,
+      setIsHome
    }
 
    return (
-      <Context.Provider value={lollo}>
+      <Context.Provider value={Values}>
          {children}
       </Context.Provider>
    )

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Context from "../../context";
-import Name from "./Name";
+import Name from "./HeroName";
 
 
 

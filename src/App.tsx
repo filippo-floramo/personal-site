@@ -1,8 +1,9 @@
 import React from 'react';
 import { ContextProvider } from './context';
 import { Routes, Route } from "react-router-dom"
-import Hero from './components/Hero/HeroIndex';
+import Home from './pages/Home';
 import Navbar from './components/Navbar/Navbar';
+import About from './pages/About';
 import './styles/App.scss';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <ContextProvider>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Hero />}/>
+        <Route path='/' element={<Home />}/>
+        <Route path='/About' element={<About />} />
       </Routes>
     </ContextProvider>
   );
