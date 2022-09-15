@@ -24,12 +24,12 @@ export default function Navbar(): JSX.Element {
                isHome ?
                   <>
                      <span><Link to="/About">About</Link></span>
-                     <span><Link  to="/">Skills</Link></span>
-                     <span><Link  to="/">Contact</Link></span>
+                     <span><Link  to="/Skills">Skills</Link></span>
+                     <span><Link  to="/Contact">Contact</Link></span>
                   </>
                   :
                   <>
-                     <span><Link to="/">About</Link></span>
+                     <span><Link to="/">LoL</Link></span>
                   </>
             }
             <span>{`}`}</span>

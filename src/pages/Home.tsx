@@ -3,9 +3,9 @@ import HeroIndex from "../components/Hero/HeroIndex";
 
 
 export default function Home(): JSX.Element {
-   return(
+   return (
       <>
-      <HeroIndex />
+         <HeroIndex />
       </>
    )
 }

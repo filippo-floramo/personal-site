@@ -6,11 +6,14 @@ import { motion } from "framer-motion";
 const pathVariants = {
    hidden: {
       pathLength: 0,
+      opacity: 0
    },
    visible: {
       pathLength: 1,
+      opacity: 1,
       transition: {
-         duration: 2
+         pathLength: {duration: 2},
+         opacity: {duration: 0.25}
       }
    }
 
@@ -18,7 +21,7 @@ const pathVariants = {
 
 
 
-export default function Name(): JSX.Element {
+export default function HeroName(): JSX.Element {
 
    return (
       <svg className="name"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.93 155.69">
