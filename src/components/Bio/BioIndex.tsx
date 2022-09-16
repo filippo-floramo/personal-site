@@ -1,6 +1,7 @@
 import React from "react";
 import BioContent from "./BioContent";
 import { Link } from "react-router-dom";
+import Arrow from "../utils/Arrow";
 
 
 
@@ -14,9 +15,9 @@ export default function BioIndex(): JSX.Element {
                maria
             </div>
             <BioContent />
-            <div className="arrow">
-              <Link to="/Skills">popoopo</Link>
-            </div>
+            <Link to="/Skills">
+               <Arrow />
+            </Link>
          </section>
       </>
    )

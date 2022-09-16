@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import SkillsContent from "./SkillsContent"
+import Arrow from "../utils/Arrow"
 
 
 
@@ -16,13 +17,14 @@ export default function SkillIndex(): JSX.Element {
                <div className="skills--github">
                   glutei
                </div>
-               
+
             </div>
          </section>
 
-         <div className="skills--arrow">
-            <Link to='/Contact'>lol</Link>
-         </div>
+         <Link to='/Contact'>
+            <Arrow />
+         </Link>
+
 
       </>
    )

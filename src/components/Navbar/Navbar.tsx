@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import Context from "../../context";
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import initials from "../../img/sigla.svg"
 
 
 
@@ -24,12 +25,16 @@ export default function Navbar(): JSX.Element {
                isHome ?
                   <>
                      <span><Link to="/About">About</Link></span>
-                     <span><Link  to="/Skills">Skills</Link></span>
-                     <span><Link  to="/Contact">Contact</Link></span>
+                     <span><Link to="/Skills">Skills</Link></span>
+                     <span><Link to="/Contact">Contact</Link></span>
                   </>
                   :
                   <>
-                     <span><Link to="/">LoL</Link></span>
+                     <span>
+                        <Link to="/">
+                           <img className="initials" src={initials} alt="" />
+                        </Link>
+                     </span>
                   </>
             }
             <span>{`}`}</span>
