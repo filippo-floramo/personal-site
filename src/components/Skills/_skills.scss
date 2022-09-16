@@ -7,32 +7,34 @@
    justify-content: space-around;
    align-items: center;
 
+   &--descr {
+      margin-top: 60px;
+   }
+
    &--container {
       width: 80%;
       height: 65%;
 
       display: flex;
       background-color: aquamarine;
-      justify-content: space-between;
+      justify-content: space-around;
 
-      .skills--content {
-         width: 60%;
-         height: 100%;
-         background-color: rgb(51, 51, 51);
-         border-radius: 10px;
-         color: white;
-      }
+      
 
       .skills--github {
          width: 30%;
          height: 100%;
-         background-color: beige;
+         background-color:white;
+         border-radius: 10px;
+         border: 4px solid black;
+         padding: 15px;
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+
       }
    }
-}
-
-.skills--arrow {
-   position: absolute;
-   top: 50%;
-   left: 93%;
 }
