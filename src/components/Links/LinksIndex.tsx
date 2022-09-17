@@ -5,6 +5,10 @@ import linkedin from "../../img/linkedin.svg";
 
 
 export default function LinksIndex(): JSX.Element {
+
+
+/*Put all the links into a component that renders with props */
+
    return (
       <>
          <section className="links">
