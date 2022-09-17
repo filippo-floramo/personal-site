@@ -15,9 +15,7 @@ export default function BioIndex(): JSX.Element {
                maria
             </div>
             <BioContent />
-            <Link to="/Skills">
-               <Arrow />
-            </Link>
+            <Arrow route="/Skills" />
          </section>
       </>
    )

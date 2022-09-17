@@ -9,11 +9,13 @@
 
    &--descr {
       margin-top: 60px;
+      z-index: 3;
    }
 
    &--container {
       width: 80%;
       height: 65%;
+      z-index: 3;
 
       display: flex;
       background-color: aquamarine;

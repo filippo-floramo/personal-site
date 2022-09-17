@@ -23,11 +23,10 @@ export default function SkillIndex(): JSX.Element {
                <SkillsPortfolio />
 
             </div>
+         <Arrow route="/Contact" />
          </section>
 
-         <Link to='/Contact'>
-            <Arrow />
-         </Link>
+
 
 
       </>

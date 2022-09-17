@@ -1,0 +1,71 @@
+@media (max-width: 1300px) {
+
+   /*Arrow*/
+
+   .arrow--container {
+      position: static;
+      transform: rotate(90deg);
+      margin-top: 40px;
+
+      .arrow {
+         padding-bottom: 20px;
+      }
+
+   }
+
+   /*About section*/
+
+   .about {
+
+      padding: 0 13px;
+
+      .about--container {
+         width: 100%;
+         flex-direction: column;
+         align-items: center;
+
+         &--content {
+            width: 100%;
+         }
+      }
+   }
+
+
+   /*Skills section*/
+
+   .skills {
+      min-height: 100vh;
+
+      .skills--descr {
+         margin-top: 400px;
+         text-align: center;
+      }
+
+      &--container {
+         min-height: 680px;
+         width: 100%;
+         margin-top: 50px;
+         flex-direction: column;
+         align-items: center;
+
+
+         .skills--content {
+            height: 400px;
+            width: 70%;
+         }
+
+         .skills--github {
+            height: 250px;
+            width: 250px;
+         }
+      }
+   }
+}
+
+@media (max-width: 700px) {
+   .skills--container {
+      .skills--content {
+         width: 95%;
+      }
+   }
+}

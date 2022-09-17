@@ -1,12 +1,17 @@
 import React from "react";
- import arrow from "../../img/arrow.svg";
+import arrow from "../../img/arrow.svg";
+import { Link } from "react-router-dom";
 
+interface props {
+   route: string
+}
 
-
-export default function Arrow() {
-   return ( 
+export default function Arrow({ route }: props) {
+   return (
       <div className="arrow--container">
-         <img className="arrow" src={arrow} alt="arrow" />
+         <Link to={route}>
+            <img className="arrow" src={arrow} alt="arrow" />
+         </Link>
       </div>
    )
 }
