@@ -1,4 +1,6 @@
 import React from "react";
+import { refs } from "../../interfaces";
+import LinksIcon from "./LinksIcon";
 import github from "../../img/github.svg";
 import linkedin from "../../img/linkedin.svg";
 
@@ -6,23 +8,45 @@ import linkedin from "../../img/linkedin.svg";
 
 export default function LinksIndex(): JSX.Element {
 
+   const iconsData: refs[] = [
+      {
+         icon: github,
+         href: "https://github.com/filippo-floramo?tab=repositories",
+         alt: "github icon",
+         class: "icons github",
+      },
+      {
+         icon: linkedin,
+         href: "https://www.linkedin.com/in/filippo-floramo-296154214/",
+         alt: "linkedin icon",
+         class: "icons linkedin",
+      },
+      {
+         icon: github,
+         href: "google.com",
+         alt: "mail icon",
+         class: "icons mail",
+      },
+   ]
 
-   /*Put all the links into a component that renders with props */
+   const icons: JSX.Element[] = iconsData.map((icon) => {
+      return (
+         <LinksIcon
+            key={icon.href}
+            icon={icon.icon}
+            href={icon.href}
+            alt={icon.alt}
+            class={icon.class}
+         />
+      )
+   })
 
    return (
       <>
          <section className="links">
             <h1 className="link--title">Well, that's it for this site. <br /> Still Curious? <br /> Let's get in touch!</h1>
             <div className="links--container">
-               <a href="https://www.google.com/" rel="noreferrer" target="_blank">
-                  <img className="icons github" src={github} alt="github icon" />
-               </a>
-               <a href="https://www.google.com/" rel="noreferrer" target="_blank">
-                  <img className="icons linkedin" src={linkedin} alt="linkedin icon" />
-               </a>
-               <a href="https://www.google.com/" rel="noreferrer" target="_blank">
-                  <img className="icons github" src={github} alt="mail icon" />
-               </a>
+               {icons}
             </div>
          </section>
       </>
