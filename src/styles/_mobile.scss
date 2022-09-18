@@ -27,6 +27,14 @@
          &--content {
             width: 100%;
          }
+
+         .main{
+            left: 0;
+         }
+         .secondary {
+            right: 0;
+            margin-top: -290px;
+         }
       }
    }
 

@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import Context from "../../context";
+import React from "react";
 import Name from "./HeroName";
 
 
@@ -7,17 +6,6 @@ import Name from "./HeroName";
 
 
 export default function Hero(): JSX.Element {
-
-   const lollino = useContext(Context);
-
-   if (!lollino) return <div>No context yet</div>;
-
-   // const { lol } = lollino; whits template to use Context
-
-
-
-
-
 
 
    return (
