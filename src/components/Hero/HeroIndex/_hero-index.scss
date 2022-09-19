@@ -21,31 +21,3 @@
       }
    }
 }
-
-// Name.tsx
-
-.name {
-   display: block;
-   margin: 0 auto;
-   width: 88%;
-   min-width: 330px;
-}
-
-.stroke-1, .stroke-2 {
-   fill: none;
-   stroke: #1d1d1b;
-   stroke-linecap: round;
-   stroke-linejoin: round;
-}
-
-.stroke-1 {
-   stroke-width: 4px;
-}
-
-.stroke-2 {
-   stroke-width: 3px;
-}
-
-.stroke-3 {
-   fill: #1d1d1b;
-}

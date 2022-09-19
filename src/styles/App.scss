@@ -1,11 +1,14 @@
 @import "config";
-@import "../components/Hero/hero";
+@import "../components/Hero/HeroIndex/hero-index";
+@import "../components/Hero/HeroName/hero-name";
 @import "../components/Navbar/navbar";
-@import "../components/Bio/bio";
-@import "../components/Skills/skills";
-@import "../components/Skills/skills-content";
-@import "../components/Links/links";
-@import "../components/utils/_arrow";
+@import "../components/Bio/BioIndex/bio-index";
+@import "../components/Bio/BioContent/bio-content";
+@import "../components/Skills/SkillsIndex/skills-index";
+@import "../components/Skills/SkillsContent/skills-content";
+@import "../components/Links/LinksIndex/links-index";
+@import "../components/Links/LinksIcon/links-icon";
+@import "../components/Arrow/_arrow";
 
 
 @import "mobile";

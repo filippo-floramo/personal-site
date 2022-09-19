@@ -1,5 +1,5 @@
 import React from "react";
-import Name from "./HeroName";
+import Name from "../HeroName/HeroName";
 
 
 

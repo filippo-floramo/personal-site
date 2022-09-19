@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { UseIsMobile, UseIsDesktop } from "../utils/utils";
+import { UseIsMobile, UseIsDesktop } from "../../../utils/utils";
 
 
 

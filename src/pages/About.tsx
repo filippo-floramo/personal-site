@@ -1,5 +1,5 @@
 import React from "react";
-import BioIndex from "../components/Bio/BioIndex";
+import BioIndex from "../components/Bio/BioIndex/BioIndex";
 
 
 

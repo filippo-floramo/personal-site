@@ -1,7 +1,6 @@
 import React from "react";
-import BioContent from "./BioContent";
-import { Link } from "react-router-dom";
-import Arrow from "../utils/Arrow";
+import BioContent from "../BioContent/BioContent";
+import Arrow from "../../Arrow/Arrow";
 
 
 

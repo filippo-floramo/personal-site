@@ -1,5 +1,5 @@
 import React from "react";
-import { refs } from "../../interfaces";
+import { refs } from "../../../interfaces";
 
 
 export default function LinksIcon(props: refs): JSX.Element {

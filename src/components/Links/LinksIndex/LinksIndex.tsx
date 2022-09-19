@@ -1,8 +1,8 @@
 import React from "react";
-import { refs } from "../../interfaces";
-import LinksIcon from "./LinksIcon";
-import github from "../../img/github.svg";
-import linkedin from "../../img/linkedin.svg";
+import { refs } from "../../../interfaces";
+import LinksIcon from "../LinksIcon/LinksIcon";
+import github from "../../../img/github.svg";
+import linkedin from "../../../img/linkedin.svg";
 
 
 

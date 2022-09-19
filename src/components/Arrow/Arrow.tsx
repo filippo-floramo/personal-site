@@ -1,4 +1,4 @@
-import React from "react";
+
 import arrow from "../../img/arrow.svg";
 import { Link } from "react-router-dom";
 

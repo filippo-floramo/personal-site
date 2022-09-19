@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import SkillsContent from "./SkillsContent";
-import Arrow from "../utils/Arrow";
-import SkillsPortfolio from "./SkillsPortfolio";
+import SkillsContent from "../SkillsContent/SkillsContent";
+import Arrow from "../../Arrow/Arrow";
+import SkillsPortfolio from "../SkillsPortfolio";
 
 
 
@@ -23,12 +22,8 @@ export default function SkillIndex(): JSX.Element {
                <SkillsPortfolio />
 
             </div>
-         <Arrow route="/Contact" />
+            <Arrow route="/Contact" />
          </section>
-
-
-
-
       </>
    )
 
