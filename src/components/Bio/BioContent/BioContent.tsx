@@ -1,18 +1,22 @@
-import  { useState } from "react";
-import { motion } from "framer-motion";
+import {  useContext } from "react";
+import { motion, Variants } from "framer-motion";
 import { UseIsMobile, UseIsDesktop } from "../../../utils/utils";
-
+import Context from "../../../context";
 
 
 export default function BioContent() {
 
-   const [isOpen, setIsOpen] = useState<boolean>(false); /* level up to Context */
+   const Ctx = useContext(Context);
+
+   if (!Ctx) return <div>No context yet</div>;
+
+   const { isOpen, setIsOpen } = Ctx;
 
    const isMobile = UseIsMobile();
    const isDesktop = UseIsDesktop();
 
 
-   const mainVariants: any = isDesktop ?
+   const mainVariants: Variants = isDesktop ?
       {
          animate: isOpen ?
             {
@@ -20,8 +24,8 @@ export default function BioContent() {
                transition: {
                   duration: 0.5
                }
-            } : undefined,
-      } : undefined
+            } : {},
+      } : {}
 
 
    const secondaryVariants = isMobile ?
@@ -29,9 +33,7 @@ export default function BioContent() {
          animate: isOpen ?
             {
                y: 305,
-               transition: {
-                  duration: 0.5
-               }
+               transition: { duration: 0.5 }
             }
             :
             {
@@ -48,9 +50,7 @@ export default function BioContent() {
          animate: isOpen ?
             {
                x: 270,
-               transition: {
-                  duration: 0.5
-               }
+               transition: { duration: 0.5 }
             }
             :
             {
@@ -67,14 +67,10 @@ export default function BioContent() {
       animate: isOpen ?
          {
             opacity: 1,
-            transition: {
-               duration: 1
-            }
+            transition: { duration: 1 }
          }
          :
-         {
-            opacity: 0
-         }
+         { opacity: 0 }
    }
 
    return (
@@ -96,6 +92,7 @@ export default function BioContent() {
 
          <motion.div
             className="about--container--content secondary"
+            onClick={() => setIsOpen(prevState => !prevState)}
 
             variants={secondaryVariants}
             animate="animate"
@@ -103,6 +100,7 @@ export default function BioContent() {
 
             <motion.div
                className="text--container"
+
 
                variants={textVariants}
                animate="animate"

@@ -1,43 +1,41 @@
-import React from "react";
+import { WindupChildren, Pace, Pause } from "windups";
 
 
 
 export default function SkillsContent(): JSX.Element {
 
-
-   // const content: (String | JSX.Element)[]= [
-   //    "export default function Skills() {", 
-   //    <br/>, 
-   //    "}",
-   //    "come mi diverto"
-   // ];
-
    return (
       <>
          <div className="skills--content">
-            <p>
-               export default function Skills{`()`} {`{`}
-               <br />
-               &emsp; return {`(`}
-               <br />
-               &emsp; {`<>`}
-               <br />
-               &emsp;&emsp; <span>{`<Html />`}</span>
-               <br />
-               &emsp;&emsp; {`<Css />`}
-               <br />
-               &emsp;&emsp; {`<Js />`}
-               <br />
-               &emsp;&emsp; {`<React />`}
-               <br />
-               &emsp;&emsp; {`<AdobeIllustrator />`}
-               <br />
-               &emsp; {`</>`}
-               <br />
-               &emsp;{`)`}
-               <br />
-               {`}`}
-            </p>
+            <WindupChildren>
+               <Pace ms={50}>
+                  <p className="skills--text">
+                     <span></span>
+                     <Pause ms={1500} />
+                     export default function Skills{`()`} {`{`}
+                     <br />
+                     &emsp; return {`(`}
+                     <br />
+                     &emsp; {`<>`}
+                     <br />
+                     &emsp;&emsp; <span>{`<Html />`}</span>
+                     <br />
+                     &emsp;&emsp; {`<Css />`}
+                     <br />
+                     &emsp;&emsp; {`<Js />`}
+                     <br />
+                     &emsp;&emsp; {`<React />`}
+                     <br />
+                     &emsp;&emsp; {`<AdobeIllustrator />`}
+                     <br />
+                     &emsp; {`</>`}
+                     <br />
+                     &emsp;{`)`}
+                     <br />
+                     {`}`}
+                  </p>
+               </Pace>
+            </WindupChildren>
          </div>
       </>
    )
