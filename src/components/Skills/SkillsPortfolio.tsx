@@ -9,7 +9,7 @@ export default function SkillsPortfolio() {
          <h3>
            But I know, <em> seeing is believing </em>,
             <br />
-            <a href="https://talent.start2impact.it/profile/filippo-floramo"> so here's what I managed to make so far.</a>
+            <a href="https://talent.start2impact.it/profile/filippo-floramo" rel="noreferrer" target="_blank"> so here's what I managed to make so far.</a>
          </h3>
 
       </div>

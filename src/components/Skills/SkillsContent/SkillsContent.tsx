@@ -24,9 +24,9 @@ export default function SkillsContent(): JSX.Element {
                      <br />
                      &emsp;&emsp; {`<Js />`}
                      <br />
-                     &emsp;&emsp; {`<React />`}
+                     &emsp;&emsp; {`<Typescript />`}
                      <br />
-                     &emsp;&emsp; {`<AdobeIllustrator />`}
+                     &emsp;&emsp; {`<React />`}
                      <br />
                      &emsp; {`</>`}
                      <br />

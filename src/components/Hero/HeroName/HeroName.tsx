@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 
@@ -24,6 +25,12 @@ const pathVariants = {
          pathLength: {duration: 1.5},
          opacity: {duration: 0.25, delay: 1.25}
       }
+   },
+
+   hover: {
+      scaleX: 1.03,
+      scaleY:1.05,
+      transition: { duration: 0.5}
    }
 }
 
@@ -32,7 +39,8 @@ const pathVariants = {
 export default function HeroName(): JSX.Element {
 
    return (
-      <svg className="name"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.93 155.69">
+      <Link to="/About"> 
+      <motion.svg className="name" variants={pathVariants} whileHover="hover"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.93 155.69">
          <motion.path variants={pathVariants} initial="hidden" animate="visible" exit="exit" className="stroke-1" d="M2,52.71a40.45,40.45,0,0,0,14-7.89,23,23,0,0,0,7.24-11.15c2.73-10.47-4-21.9-11-29.21C9.51,1.59,5.93.53,6.1,5.19,6.22,8.25,7.85,11.44,9.38,14c4.25,7.13,11,12.13,18.5,15.38a91.14,91.14,0,0,0,19.24,5.38c18.3,3.44,38.65,6.28,57.08,2.41,4.68-1,9.38-2.55,13-5.68,2-1.71,3.65-4.25,3.07-6.8s-3.18-4.08-5.69-4.77a25.07,25.07,0,0,0-12.23.15C80.11,25.21,65.79,45.17,55.92,64.29a404.69,404.69,0,0,0-17.23,37.23C32,118.59,25.62,135,25.73,153.69" />
          <motion.path variants={pathVariants} initial="hidden" animate="visible" exit="exit" className="stroke-2" d="M27.66,89.29c9-4.44,17.73-8.07,28-6.21" />
          <motion.line variants={pathVariants} initial="hidden" animate="visible" exit="exit" className="stroke-1" x1="60.37" y1="93.31" x2="64.81" y2="85.73" />
@@ -43,6 +51,7 @@ export default function HeroName(): JSX.Element {
          <motion.path variants={pathVariants} initial="hidden" animate="visible" exit="exit" className="stroke-1" d="M160.93,94.78c0,10.44-12.16,10-14.06,2.44s8.18-15.49,12-6.81" />
          <circle className="stroke-3" cx="67.16" cy="80.86" r="2.35" />
          <circle className="stroke-3" cx="100.83" cy="84.23" r="2.35" />
-      </svg>
+      </motion.svg>
+      </Link>
    )
 }
