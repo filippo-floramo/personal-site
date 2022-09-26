@@ -1,12 +1,35 @@
 .skills--content {
+   font-family: 'Consolas';
    width: 60%;
    height: 100%;
    background-color: rgb(51, 51, 51);
    border-radius: 10px;
    color: white;
-   padding: 50px 40px;
+   padding: 30px 40px;
+
 }
 
 .skills--text {
-   font-size: 1.5rem;
+   font-size: clamp(1.3rem, 3vw, 1.5rem);
+   margin-top: 20px;
+
+   .purple {
+      color: #c586c0;
+   }
+
+   .blue {
+      color: #3771bf;
+   }
+
+   .yellow {
+      color: #d3dc92;
+   }
+
+   .more-yellow {
+      color: #e5cc06;
+   }
+
+   .element {
+      color: #49b786;
+   }
 }
