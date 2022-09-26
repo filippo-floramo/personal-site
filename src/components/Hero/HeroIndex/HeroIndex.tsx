@@ -7,6 +7,7 @@ import { motion, Variants } from "framer-motion";
 
 export default function Hero(): JSX.Element {
 
+
    const textVariants: Variants = {
       hidden: { opacity: 1 },
       exit: {
@@ -31,7 +32,7 @@ export default function Hero(): JSX.Element {
             >
                Hi, I'm
             </motion.p>
-            <Name />
+            <Name  />
             <motion.p
                className="hero--content--text"
 
