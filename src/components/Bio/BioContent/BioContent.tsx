@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+import { useContext } from "react";
 import { motion, Variants } from "framer-motion";
 import { UseIsMobile, UseIsDesktop } from "../../../utils/utils";
 import Context from "../../../context";
@@ -73,10 +73,20 @@ export default function BioContent() {
          { opacity: 0 }
    }
 
+   const containerVariants: Variants = {
+      exit: {
+         scale: 0,
+         transition: {
+            duration: 1.8,
+            ease: "anticipate"
+         }
+      }
+   }
+
    return (
-      <div className="about--container">
+      <motion.div variants={containerVariants} exit="exit" className="about--container">
          <motion.div
-            className="about--container--content main"
+            className="about--container--content primary"
             onClick={() => setIsOpen(prevState => !prevState)}
 
             variants={mainVariants}
@@ -110,15 +120,18 @@ export default function BioContent() {
                <h4>This the principle i followed when pursuing my most important milestones:</h4>
 
                <ul>
-                  <li>On March 2021 I graduate with a bachelor's degree in Business Management at the University of Messina.
+                  <li>
+                     On March 2021 I graduate with a bachelor's degree in Business Management at the University of Messina.
                   </li>
-                  <li>On April 2021 I join <a href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>'s community, choosing the Digital Marketing path.
+                  <li>
+                     On April 2021 I join <a href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>'s community, choosing the Digital Marketing path.
                   </li>
-                  <li>On January 2022 I switch to web development while studying SEO on the <a href="https://www.start2impact.it" rel="noreferrer" target="_blank" className="s2i">S2i</a> platform. It was love at first sight, and I didn't get back since.
+                  <li>
+                     On January 2022 I switch to web development while studying SEO on the <a href="https://www.start2impact.it" rel="noreferrer" target="_blank" className="s2i">S2i</a> platform. It was love at first sight, and I didn't get back since.
                   </li>
                </ul>
             </motion.div>
          </motion.div>
-      </div>
+      </motion.div>
    )
 }

@@ -1,7 +1,7 @@
-import  { useContext } from "react"
+import { useContext } from "react"
 import Context from "../../context";
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import initials from "../../img/sigla.svg"
 
 
@@ -15,12 +15,49 @@ export default function Navbar(): JSX.Element {
 
    const { isHome } = Ctx;
 
+   const curlyLeftVariants: Variants = {
+      hidden: { x: 0 },
+      animate: isHome ?
+         {}
+         :
+         {
+            x: [0, 90, 60],
+            transition: { duration: 2 }
+         }
+   }
 
+   const curlyRightVariants: Variants = {
+      hidden: { x: 0 },
+      animate: isHome ?
+         {}
+         :
+         {
+            x: [0, -90, -60],
+            transition: { duration: 2 }
+         }
+   }
+
+   const initialsVariants: Variants = {
+      hidden: { opacity: 0 },
+      animate: {
+         opacity: 1,
+         transition: {
+            delay: 1.33,
+            duration: 0.5
+         }
+      }
+
+   }
 
    return (
       <nav className="nav">
          <div className="nav--container">
-            <motion.span initial={{ x: 0 }} animate={{ x: [0, 50, 20], transition: { duration: 2 } }}>{`{`}</motion.span>
+            <motion.span
+               variants={curlyLeftVariants}
+               initial="hidden"
+               animate="animate"
+
+            >{`{`}</motion.span>
             {
                isHome ?
                   <>
@@ -30,14 +67,18 @@ export default function Navbar(): JSX.Element {
                   </>
                   :
                   <>
-                     <span>
+                     <motion.span variants={initialsVariants} initial="hidden" animate="animate">
                         <Link to="/">
                            <img className="initials" src={initials} alt="" />
                         </Link>
-                     </span>
+                     </motion.span>
                   </>
             }
-            <span>{`}`}</span>
+            <motion.span
+               variants={curlyRightVariants}
+               initial="hidden"
+               animate="animate"
+            >{`}`}</motion.span>
          </div>
       </nav>
    )

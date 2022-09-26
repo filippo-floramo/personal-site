@@ -8,6 +8,8 @@ import linkedin from "../../../img/linkedin.svg";
 
 export default function LinksIndex(): JSX.Element {
 
+
+
    const iconsData: refs[] = [
       {
          icon: github,
@@ -45,7 +47,7 @@ export default function LinksIndex(): JSX.Element {
       <>
          <section className="links">
             <h1 className="link--title">Well, that's it for this site. <br /> Still Curious? <br /> Let's get in touch!</h1>
-            <div className="links--container">
+            <div  className="links--container">
                {icons}
             </div>
          </section>

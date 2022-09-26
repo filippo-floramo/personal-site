@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, Variants } from "framer-motion";
 import SkillsContent from "../SkillsContent/SkillsContent";
 import Arrow from "../../Arrow/Arrow";
 import SkillsPortfolio from "../SkillsPortfolio";
@@ -6,22 +7,32 @@ import SkillsPortfolio from "../SkillsPortfolio";
 
 
 
+
 export default function SkillIndex(): JSX.Element {
+
+   const skillsVariants: Variants = {
+      exit: {
+         opacity: 0,
+         transition: {
+            duration: 1.3
+         }
+      }
+   }
 
    return (
       <>
          <section className="skills">
 
-            <h1 className="skills--descr">
+            <motion.h1 variants={skillsVariants} exit="exit" className="skills--descr">
                Skills are like coding, always under development.
-            </h1>
+            </motion.h1>
 
-            <div className="skills--container">
+            <motion.div variants={skillsVariants} exit="exit" className="skills--container">
 
                <SkillsContent />
                <SkillsPortfolio />
 
-            </div>
+            </motion.div>
             <Arrow route="/Contact" />
          </section>
       </>
