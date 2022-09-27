@@ -27,10 +27,8 @@ export default function Arrow({ route }: props) {
          initial: { rotate: 90},
          animate: isOpen ? {
             y: 305,
-         }
-            : {}
-      }
-      : {}
+         } : {}
+      }  : {}
 
 
 

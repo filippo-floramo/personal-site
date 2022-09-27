@@ -31,7 +31,7 @@ export function ContextProvider({ children }: any) {
    }, [pageLocation])
 
    useEffect(() => {
-      if (pageLocation.pathname !== "/About") { setIsOpen(false); console.log("lol") }
+      if (pageLocation.pathname !== "/About") { setIsOpen(false); }
    }, [pageLocation])
 
 

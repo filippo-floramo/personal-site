@@ -35,7 +35,7 @@ export default function SkillsContent(): JSX.Element {
                      &emsp; <span className="purple">return</span> {`(`}
                      <br />
                      <span className="grey">
-                        &emsp; <span>{`<>`}</span>
+                        &emsp; {`<>`}
                         <br />
                         {textElements}
                         &emsp; {`</>`}

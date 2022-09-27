@@ -74,6 +74,18 @@ export default function BioContent() {
    }
 
    const containerVariants: Variants = {
+
+      hidden: { opacity: 0 },
+
+      animate: {
+         opacity: 1,
+         transition: {
+            delay: 0.8,
+            duration: 0.4,
+            ease: "easeOut"
+         }
+      },
+
       exit: {
          scale: 0,
          transition: {
@@ -84,7 +96,7 @@ export default function BioContent() {
    }
 
    return (
-      <motion.div variants={containerVariants} exit="exit" className="about--container">
+      <motion.div variants={containerVariants} initial="hidden" animate="animate" exit="exit" className="about--container">
          <motion.div
             className="about--container--content primary"
             onClick={() => setIsOpen(prevState => !prevState)}
@@ -117,7 +129,7 @@ export default function BioContent() {
             >
                <h3> Plan -&gt; Do -&gt; Check -&gt; Act. </h3>
 
-               <h4>This the principle i followed when pursuing my most important milestones:</h4>
+               <h4>This is the principle I followed when pursuing my most important milestones:</h4>
 
                <ul>
                   <li>

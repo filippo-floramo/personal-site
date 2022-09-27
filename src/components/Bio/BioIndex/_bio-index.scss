@@ -9,12 +9,16 @@
    justify-content: space-around;
 
    .about--propic {
-      height: 100px;
-      width: 100px;
+      height: 180px;
+      width: 180px;
       align-self: center;
       background-color: white;
       margin-top: 90px;
       z-index: 2;
+
+      .profile--pic {
+         height: 100%;
+      }
 
    }
 }

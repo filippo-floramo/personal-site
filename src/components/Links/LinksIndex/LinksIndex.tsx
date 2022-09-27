@@ -48,7 +48,7 @@ export default function LinksIndex(): JSX.Element {
       <>
          <section className="links">
             <p className="links--title">Well, that's it for this site. </p>
-            <p className="links--title"> Wait, still curious? <br /> <em>Let's get in touch!</em> </p>
+            <p className="links--title"> Still curious? <br /> <em>Let's get in touch!</em> </p>
             <div className="links--container">
                {icons}
             </div>
