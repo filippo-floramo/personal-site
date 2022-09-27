@@ -28,7 +28,7 @@ export default function Arrow({ route }: props) {
          animate: isOpen ? {
             y: 305,
          } : {}
-      }  : {}
+      } : {}
 
 
 
