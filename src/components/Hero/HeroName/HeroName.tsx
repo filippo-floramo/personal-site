@@ -57,7 +57,7 @@ const circleVariants: Variants = {
 
 export default function HeroName(): JSX.Element {
 
-   const navigate = useNavigate()
+   const navigate = useNavigate();
 
    return (
          <motion.svg onClick={() => navigate("/About")} className="name" variants={pathVariants} whileHover="hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.93 155.69">

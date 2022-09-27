@@ -32,7 +32,9 @@ export default function Hero(): JSX.Element {
             >
                Hi, I'm
             </motion.p>
+
             <Name  />
+            
             <motion.p
                className="hero--content--text"
 

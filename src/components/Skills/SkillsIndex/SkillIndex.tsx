@@ -2,7 +2,7 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import SkillsContent from "../SkillsContent/SkillsContent";
 import Arrow from "../../Arrow/Arrow";
-import SkillsPortfolio from "../SkillsPortfolio";
+import SkillsPortfolio from "../SkillsPortfolio/SkillsPortfolio";
 
 
 

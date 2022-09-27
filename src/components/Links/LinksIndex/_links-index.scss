@@ -6,15 +6,18 @@
    flex-direction: column;
    justify-content: center;
 
-   h1 {
-      height: 30%;
+   &--title {
+      height: 20%;
       justify-self: flex-start;
 
       text-align: center;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 2.5rem;
    }
 
    .links--container {
-      height: 20%;
+      height: 30%;
 
       display: flex;
       flex-direction: column;

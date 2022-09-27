@@ -1,13 +1,17 @@
 import { useContext } from "react"
 import Context from "../../context";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { motion, Variants } from "framer-motion"
 import initials from "../../img/sigla.svg"
 
 
 
 
+
 export default function Navbar(): JSX.Element {
+
+   const navigate = useNavigate();
+
 
    const Ctx = useContext(Context);
 
@@ -15,11 +19,10 @@ export default function Navbar(): JSX.Element {
 
    const { isHome } = Ctx;
 
+
    const curlyLeftVariants: Variants = {
       hidden: { x: 0 },
-      animate: isHome ?
-         {}
-         :
+      animate: isHome ? {} :
          {
             x: [0, 90, 60],
             transition: { duration: 2 }
@@ -28,9 +31,7 @@ export default function Navbar(): JSX.Element {
 
    const curlyRightVariants: Variants = {
       hidden: { x: 0 },
-      animate: isHome ?
-         {}
-         :
+      animate: isHome ? {} :
          {
             x: [0, -90, -60],
             transition: { duration: 2 }
@@ -45,40 +46,53 @@ export default function Navbar(): JSX.Element {
             delay: 1.33,
             duration: 0.5
          }
+      },
+      hover: {
+         cursor: "pointer"
       }
-
    }
 
    return (
       <nav className="nav">
          <div className="nav--container">
             <motion.span
+               className="curly"
+
                variants={curlyLeftVariants}
                initial="hidden"
                animate="animate"
-
-            >{`{`}</motion.span>
+            >
+               {`{`}
+            </motion.span>
             {
                isHome ?
                   <>
-                     <span><Link to="/About">About</Link></span>
-                     <span><Link to="/Skills">Skills</Link></span>
-                     <span><Link to="/Contact">Contact</Link></span>
+                     <span><Link className="nav--link" to="/About">About</Link></span>
+                     <span><Link className="nav--link" to="/Skills">Skills</Link></span>
+                     <span><Link className="nav--link" to="/Contact">Contact</Link></span>
                   </>
                   :
                   <>
-                     <motion.span variants={initialsVariants} initial="hidden" animate="animate">
-                        <Link to="/">
-                           <img className="initials" src={initials} alt="" />
-                        </Link>
+                     <motion.span
+                        onClick={() => navigate("/")}
+                        variants={initialsVariants}
+                        initial="hidden"
+                        animate="animate"
+                        whileHover="hover"
+                     >
+                        <img className="initials" src={initials} alt="initials" />
                      </motion.span>
                   </>
             }
             <motion.span
+               className="curly"
+
                variants={curlyRightVariants}
                initial="hidden"
                animate="animate"
-            >{`}`}</motion.span>
+            >
+               {`}`}
+            </motion.span>
          </div>
       </nav>
    )

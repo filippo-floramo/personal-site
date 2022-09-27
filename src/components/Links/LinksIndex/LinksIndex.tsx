@@ -3,6 +3,7 @@ import { refs } from "../../../interfaces";
 import LinksIcon from "../LinksIcon/LinksIcon";
 import github from "../../../img/github.svg";
 import linkedin from "../../../img/linkedin.svg";
+import mail from "../../../img/mail.svg";
 
 
 
@@ -11,6 +12,12 @@ export default function LinksIndex(): JSX.Element {
 
 
    const iconsData: refs[] = [
+      {
+         icon: mail,
+         href: "mailto:filifloramo@gmail.com",
+         alt: "mail icon",
+         class: "icons mail",
+      },
       {
          icon: github,
          href: "https://github.com/filippo-floramo?tab=repositories",
@@ -22,12 +29,6 @@ export default function LinksIndex(): JSX.Element {
          href: "https://www.linkedin.com/in/filippo-floramo-296154214/",
          alt: "linkedin icon",
          class: "icons linkedin",
-      },
-      {
-         icon: github,
-         href: "google.com",
-         alt: "mail icon",
-         class: "icons mail",
       },
    ]
 
@@ -46,8 +47,9 @@ export default function LinksIndex(): JSX.Element {
    return (
       <>
          <section className="links">
-            <h1 className="link--title">Well, that's it for this site. <br /> Still Curious? <br /> Let's get in touch!</h1>
-            <div  className="links--container">
+            <p className="links--title">Well, that's it for this site. </p>
+            <p className="links--title"> Wait, still curious? <br /> <em>Let's get in touch!</em> </p>
+            <div className="links--container">
                {icons}
             </div>
          </section>

@@ -1,3 +1,8 @@
+@font-face {
+   font-family: Consolas;
+   src: url("../font/CONSOLA.TTF");
+}
+
 @import "config";
 @import "../components/Hero/HeroIndex/hero-index";
 @import "../components/Hero/HeroName/hero-name";
@@ -6,6 +11,7 @@
 @import "../components/Bio/BioContent/bio-content";
 @import "../components/Skills/SkillsIndex/skills-index";
 @import "../components/Skills/SkillsContent/skills-content";
+@import "../components/Skills/SkillsPortfolio/skills-portfolio";
 @import "../components/Links/LinksIndex/links-index";
 @import "../components/Links/LinksIcon/links-icon";
 @import "../components/Arrow/_arrow";
