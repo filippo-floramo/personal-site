@@ -2,12 +2,14 @@ import React from "react";
 import BioContent from "../BioContent/BioContent";
 import Arrow from "../../Arrow/Arrow";
 import { motion, Variants } from "framer-motion";
+import propic from "../../../img/propic-border.png";
 
 
 
 export default function BioIndex(): JSX.Element {
 
    const imageVariants: Variants = {
+
       exit: {
          opacity: 0,
          transition: {
@@ -21,7 +23,7 @@ export default function BioIndex(): JSX.Element {
       <>
          <section className="about">
             <motion.div variants={imageVariants} exit="exit" className="about--propic">
-               maria
+               <img className="profile--pic" src={propic} alt="profile pic" />
             </motion.div>
             <BioContent />
             <Arrow route="/Skills" />
