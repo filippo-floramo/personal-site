@@ -19,10 +19,21 @@
       color:  #3771bf;
       text-decoration: none;
 
+      animation: shadow  1s infinite alternate;
+
       &:hover {
-         filter: drop-shadow( 3px 3px 5px #00000058);
+         text-shadow: ( 3px 3px 5px #00000046);
          transition-duration: 0.5s;
       }
    }
+}
 
+@keyframes shadow {
+   0% {
+      filter: drop-shadow( 3px 3px 5px #00000070);
+   }
+
+   100% {
+      filter: drop-shadow( 0 0 6px #00000070);
+   }
 }

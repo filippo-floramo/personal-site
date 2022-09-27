@@ -27,6 +27,10 @@
       position: relative;
       left: 25%;
       z-index: 3;
+
+      .s2i {
+         color: white;
+      }
    }
 
    .secondary {
@@ -62,6 +66,7 @@
 
             li {
                margin-bottom: 3px;
+
             }
          }
       }
