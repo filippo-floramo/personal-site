@@ -23,7 +23,7 @@ export default function BioIndex(): JSX.Element {
       <>
          <section className="about">
             <motion.div variants={imageVariants} exit="exit" className="about--propic">
-               <img className="profile--pic" src={propic} alt="profile pic" />
+               <img className="profile--pic" src={propic} alt="profile pic maria" />
             </motion.div>
             <BioContent />
             <Arrow route="/Skills" />

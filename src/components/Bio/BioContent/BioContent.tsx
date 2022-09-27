@@ -127,9 +127,9 @@ export default function BioContent() {
                variants={textVariants}
                animate="animate"
             >
-               <h3> Plan -&gt; Do -&gt; Check -&gt; Act. </h3>
+               <h3> React to Act. </h3>
 
-               <h4>This is the principle I followed when pursuing my most important milestones:</h4>
+               <h4>This is the principle I kept in mind during my most important milestones:</h4>
 
                <ul>
                   <li>
