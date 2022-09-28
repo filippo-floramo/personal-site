@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { createContext, useState, useEffect, } from "react";
+import { BrowserRouterProps, useLocation } from "react-router-dom";
 
 
 
@@ -13,7 +13,7 @@ interface Contx {
 const Context = createContext<Contx | null>(null);
 
 
-export function ContextProvider({ children }: any) {
+export function ContextProvider({ children }: BrowserRouterProps) {
 
    const [isHome, setIsHome] = useState<boolean>(localStorage.getItem('home-page') === 'true');
    const [isOpen, setIsOpen] = useState<boolean>(false);

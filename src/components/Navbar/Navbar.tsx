@@ -67,9 +67,9 @@ export default function Navbar(): JSX.Element {
             {
                isHome ?
                   <>
-                     <span><Link className="nav--link" to="/About">About</Link></span>
-                     <span><Link className="nav--link" to="/Skills">Skills</Link></span>
-                     <span><Link className="nav--link" to="/Contact">Contact</Link></span>
+                     <Link className="nav--link" to="/About">About</Link>
+                     <Link className="nav--link" to="/Skills">Skills</Link>
+                     <Link className="nav--link" to="/Contact">Contact</Link>
                   </>
                   :
                   <>
