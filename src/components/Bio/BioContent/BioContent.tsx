@@ -96,16 +96,24 @@ export default function BioContent() {
    }
 
    return (
-      <motion.div variants={containerVariants} initial="hidden" animate="animate" exit="exit" className="about--container">
+      <motion.div
+         className="about--container"
+
+         variants={containerVariants}
+         initial="hidden"
+         animate="animate"
+         exit="exit"
+      >
+
          <motion.div
             className="about--container--content primary"
-            onClick={() => setIsOpen(prevState => !prevState)}
+            onClick={() => { setIsOpen(prevState => !prevState) }}
 
             variants={mainVariants}
             animate="animate"
          >
             <p>
-               Yup, that's me, a curious guy who fell in love with coding while studying Digital Marketing on the platform <a href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>.
+               Yup, that's me, a curious guy who fell in love with coding while studying Digital Marketing on the platform <a onClick={(e) => e.stopPropagation()} href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>.
                Everytime I write some lines of code, I get excited about the fact of creating something from scratch and see it come to life in front of the screen.
                <br />
                With that in mind, I decided to shift my field of study and fully jump into this world of strings and functions.

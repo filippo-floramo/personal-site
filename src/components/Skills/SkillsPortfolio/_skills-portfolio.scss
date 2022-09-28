@@ -19,21 +19,22 @@
       color:  black;
       text-decoration: none;
 
-      animation: shadow  1s infinite alternate;
+      animation: shadow  1.8s ease-in infinite alternate;
+
 
       &:hover {
-         text-shadow: ( 3px 3px 5px #3771bf);
-         transition-duration: 0.5s;
+         font-size: 1.28rem;
+         transition-duration: 0.3s;
       }
    }
 }
 
 @keyframes shadow {
    0% {
-      filter: drop-shadow( 3px 3px 5px #3771bf);
+      color: #2b75d6;
    }
 
    100% {
-      filter: drop-shadow( 0 0 6px #3771bf);
+      color: black;
    }
 }
