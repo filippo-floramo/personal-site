@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import { BrowserRouterProps, useLocation } from "react-router-dom";
 
 
@@ -48,6 +48,14 @@ export function ContextProvider({ children }: BrowserRouterProps) {
       </Context.Provider>
    )
 }
+
+export const useContextProvider = (): Contx => {
+   const context = useContext(Context)
+   if (context === null) {
+     throw new Error(`"useContextProvider" must be used under <ContextProvider>`)
+   }
+   return context
+ }
 
 
 export default Context;

@@ -1,5 +1,4 @@
-import { useContext } from "react"
-import Context from "../../context";
+import { useContextProvider } from "../../context";
 import { Link, useNavigate } from "react-router-dom"
 import { motion, Variants } from "framer-motion"
 import initials from "../../img/sigla.svg"
@@ -13,11 +12,7 @@ export default function Navbar(): JSX.Element {
    const navigate = useNavigate();
 
 
-   const Ctx = useContext(Context);
-
-   if (!Ctx) return <div>No context yet</div>;
-
-   const { isHome } = Ctx;
+   const { isHome } = useContextProvider();
 
 
    const curlyLeftVariants: Variants = {

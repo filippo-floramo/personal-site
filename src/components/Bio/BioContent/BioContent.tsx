@@ -1,16 +1,13 @@
-import { useContext } from "react";
 import { motion, Variants } from "framer-motion";
 import { UseIsMobile, UseIsDesktop } from "../../../utils/utils";
-import Context from "../../../context";
+import { useContextProvider } from "../../../context";
 
 
 export default function BioContent() {
 
-   const Ctx = useContext(Context);
 
-   if (!Ctx) return <div>No context yet</div>;
 
-   const { isOpen, setIsOpen } = Ctx;
+   const { isOpen, setIsOpen } = useContextProvider();
 
    const isMobile = UseIsMobile();
    const isDesktop = UseIsDesktop();
