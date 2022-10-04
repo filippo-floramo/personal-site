@@ -26,7 +26,7 @@ export default function LinksIndex(): JSX.Element {
       },
       {
          icon: linkedin,
-         href: "https://www.linkedin.com/in/filippo-floramo-296154214/",
+         href: "https://www.linkedin.com/in/filippofloramo/",
          alt: "linkedin icon",
          class: "icons linkedin",
       },
