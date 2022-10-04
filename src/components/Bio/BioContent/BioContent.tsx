@@ -110,7 +110,7 @@ export default function BioContent() {
             animate="animate"
          >
             <p>
-               Yup, that's me, a curious guy who fell in love with coding while studying Digital Marketing on the platform <a onClick={(e) => e.stopPropagation()} href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>.
+               Yup, that's me, a curious guy who fell in love with coding while studying SEO on the platform <a onClick={(e) => e.stopPropagation()} href="https://www.start2impact.it/" rel="noreferrer" target="_blank" className="s2i">Start2impact</a>.
                Everytime I write some lines of code, I get excited about the fact of creating something from scratch and see it come to life in front of the screen.
                <br />
                With that in mind, I decided to shift my field of study and fully jump into this world of strings and functions.
@@ -144,7 +144,7 @@ export default function BioContent() {
                      On April 2021 I join Start2impact's community, choosing the Digital Marketing path.
                   </li>
                   <li>
-                     On January 2022 I switch to web development while studying SEO on the S2i platform. It was love at first sight, and I didn't get back since.
+                     On January 2022 I switch to web development, it was love at first sight. Now I aim to fulfill my will of becoming a  <strong>Web Developer</strong> .
                   </li>
                </ul>
             </motion.div>
