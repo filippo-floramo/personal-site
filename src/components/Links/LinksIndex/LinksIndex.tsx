@@ -20,7 +20,7 @@ export default function LinksIndex(): JSX.Element {
       },
       {
          icon: github,
-         href: "https://github.com/filippo-floramo?tab=repositories",
+         href: "https://github.com/filippo-floramo",
          alt: "github icon",
          class: "icons github",
       },
